@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="GKbuynow.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="pics img/GK LOGO.png">
+        <script src="GKbuynow.js"></script>
+        <title>GK BUY NOW</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="GKhomepage.html"><img class="logo" src="pics img/GK LOGO.png" alt="GK Logo"></a>
+            <ul>
+                <li><a href="GKhomepage.html">Home</a></li>
+                <li><a href="GKproduct.html">Products</a></li>
+                <li><a href="GKabout.html">About Us</a></li>
+                <li><a href="GKcontact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+   <section class="by">
+            <div class="shopping-cart">
+                <h2>SHOPPING CART</h2>
+                <div class="cart-item" data-price="200.00">
+                    <img src="pics img/sun.jpg" alt="Apple Juice">
+                    <div class="item-details">
+                        <h3>Golden Glow Sunflowers</h3>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price">
+                        <p class="price">₱200</p>
+                        <a href="GKproddetails.html">Return</a>
+                    </div>
+                </div>
+            
+                <hr>
+                <div class="subtotal">
+                    <p>Sub-Total</p>
+                    <p class="item-count">2 items</p>
+                    <p class="total-price">₱6.18</p>
+                </div>
+                <a href="GKshipsunflower.html"><button class="checkout-btn">Checkout</button></a>
+            </div>
+        </section>
+
+    </body>
+</html>

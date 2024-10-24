@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK PAYMENT</title>
+    <link rel="stylesheet" href="GKthank.css">
+    <link rel="icon" type="image/png" href="pics img/GK LOGO.png">
+</head>
+<body>
+    <header class="navbar">
+        <a href="GKhomepage.html"><img class="logo" src="pics img/GK LOGO.png" alt="GK Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="GKhomepage.html">Home</a></li>
+                <li><a href="GKproduct.html">Products</a></li>
+                <li><a href="GKabout.html">About Us</a></li>
+                <li><a href="GKcontact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="payment-info">
+        <h2>Payment Info.</h2>
+        <form>
+            <div class="payment-method">
+                <label>
+                    <input type="radio" name="payment" value="credit-card" checked>
+                    <img src="pics img/GCASH.png" alt="GCASH">
+                    GCash
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    <img src="pics img/BDO.png" alt="PayPal">
+                    BDO
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    <img src="pics img/METRO.png" alt="PayPal">
+                    Metrobank
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    <img src="pics img/CITI.png" alt="PayPal">
+                    Citibank
+                </label>
+            </div>
+            <div class="card-details">
+                <label>Name On Card</label>
+                <input type="text" placeholder="John Carter" required>
+                <label>Card Number</label>
+                <input type="text" placeholder="**** **** **** 2153" required>
+             
+            </div>
+            <button type="button">Buy Now</button>
+        </form>
+    </div>
+</body>
+</html>

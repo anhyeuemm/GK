@@ -1,0 +1,985 @@
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Animation for sliding to the right */
+@keyframes slideToRight {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the final position */
+        opacity: 1;
+    }
+}
+
+/* Animation for sliding to the left */
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the final position */
+        opacity: 1;
+    }
+}
+
+/* Apply slide to right animation to .die section */
+.die p, .die img {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToRight animation */
+}
+
+/* Apply slide to left animation to .gaa section */
+.gaa p, .gaa img {
+    animation: slideToLeft 2s ease forwards; /* Apply the slideToLeft animation */
+}
+
+/* Apply slide to right animation to .pa section */
+.pa p, .pa img {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToRight animation */
+}
+
+.bt, .Our {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToRight animation */
+}
+
+.abot p, h1{
+    animation: slideToRight 2s ease forwards; /* Apply the slideToLeft animation */
+}
+.wrapper img {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToLeft animation */
+}
+/* Add animation for the .die section */
+
+.first p {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToLeft animation */
+}
+
+/* Add other animations for different sections as needed */
+/* Other existing styles */
+.bt {
+    margin-left: 300px;
+}
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: peachpuff;
+    position: relative;
+
+}
+.section-heading {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.conpay {
+    display: flex;
+    padding-top: 100px;
+    font-weight: bold;
+}
+
+.box {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: -30px;
+}
+
+.product-box {
+    background-color: #f0e4cf;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    margin-left: 40px;
+
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.product-box:hover .product-image {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+
+
+.product-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.ema {
+    margin-top: 70px;
+    margin-right: 50px;
+}
+
+.gaa {
+    overflow: hidden;
+}
+
+.goals {
+    position: relative;
+}
+.goals button{
+    float: left;
+    margin-left: 290px;
+    margin-top: -80px;
+
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-3px); /* Shake left */
+    }
+    20%, 80% {
+        transform: translateX(3px); /* Shake right */
+    }
+    30%, 50%, 70% {
+        transform: translateX(-1px); /* Shake left */
+    }
+    40%, 60% {
+        transform: translateX(1px); /* Shake right */
+    }
+}
+
+.go {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+.coin {
+    float: left;
+    margin-top: -450px;
+    margin-left: 20px;
+}
+
+.co {
+    float: right;
+    margin-bottom: -100px;
+    margin-right: 20px;
+}
+
+.gk {
+    font-size: 50px;
+}
+
+.wh {
+    font-size: 50px;
+    padding-top: 120px;
+    color: black;
+    font-weight: 800;
+}
+
+.w {
+    font-size: 50px;
+    padding-top: 20px;
+    color: black;
+    font-weight: 800;
+}
+
+.who {
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    background-color: peachpuff;
+}
+.wel{
+    font-size: 50px;
+    padding-top: 20px;
+    color: black;
+    font-weight: 800;
+
+}
+.come{
+    font-size: 20px;
+
+}
+.flow{
+    margin-top: 100px;
+    float: left;
+}
+.abot h1{
+    padding-top: 200px;
+    text-align: center;
+}
+.abot p{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.abot button{
+    margin-left: 300px;
+    margin-top: 50px;
+    align-items: center;
+}
+.die button{
+    margin-left: 10px;
+}
+.gaa {
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    background-color: peachpuff;
+}
+
+.go {
+    font-size: 50px;
+    padding-top: 200px;
+    float: left;
+    padding-left: 150px;
+    color: black;
+    font-weight: 800;
+}
+.about{
+    background-color: bisque;
+    width: 100%;
+    height: 650px;
+
+}
+.pa {
+    background-color:bisque;
+}
+
+.payment {
+    text-align: center;
+}
+.payment img{
+    border-radius: 50px;
+}
+
+.Our {
+    color: black;
+    padding-top: 100px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+}
+
+.navbar {
+    margin: auto;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Set the navigation bar to fixed position */
+    width: 100%; /* Set the width to occupy the full width of the viewport */
+    z-index: 1000; /* Ensure the navigation bar stays above other content */
+    
+
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    font-size: 15px;
+ 
+  
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;  
+      font-weight: 1000; 
+    padding: 15px;
+    margin-left: 20px;
+    float: right;
+    opacity: 100%;
+
+
+}
+.navbar a:hover {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; /* Shake effect on hover */
+    color: palevioletred;
+}
+
+
+.logo {
+    width: 150px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+.log{
+    width: 300px;
+    height: 300px;
+
+}
+
+.pays img {
+    margin: 0 90px; /* Adjust the margin to have less space between images */
+}
+
+.pays {
+    margin-top: 120px;
+    margin-left: -10px;
+}
+
+.payss img {
+    margin: 0 90px; /* Adjust the margin to have less space between images */
+}
+
+.payss {
+    margin-top: 120px;
+    margin-left: -10px;
+}
+
+.paysss img {
+    margin: 0 90px; /* Adjust the margin to have less space between images */
+}
+
+.paysss {
+    margin-top: 120px;
+    margin-left: -10px;
+    padding-bottom: 100px;
+}
+
+
+.content {
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 55%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content p {
+    margin-top: -100px;
+    font-weight: 800;
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    margin: 100px 5px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    background: plum;
+}
+
+/* Original button hover styles */
+button:hover {
+    background: palevioletred;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; /* Shake effect on hover */
+}
+
+/* Additional hover styles for more cool transitions */
+button:hover {
+    transform: scale(1.1); /* Scale the button on hover */
+    box-shadow: black; /* Add a glowing effect */
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; /* Shake effect on hover */
+}
+
+button:hover {
+    color: black;
+}
+
+.banner video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9) {
+    .banner video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Footer styles */
+/* Footer */
+footer {
+    background-color: peachpuff;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p, .footer-section a {
+    margin: 5px 0;
+    color: #333;
+}
+
+.footer-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-section button:hover {
+    background-color: #555;
+}
+
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 15px;
+    color: black;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer-section {
+        min-width: 100%;
+        text-align: left;
+    }
+}
+.lo{
+    width: 300px;
+    height: 300px;
+    margin-top: -70px;
+}
+
+@media(width < 1440px){
+    .abot button{
+        margin-left: 400px;
+    }
+}
+@media(width < 1300px){
+    .abot button{
+        margin-left: 330px;
+    }
+    .die button{
+        margin-left: 330px;
+    }
+}
+
+@media(width < 1280px){
+    .abot button{
+        margin-left: 300px;
+    }
+
+}
+
+@media(width < 1100px){
+    .abot button{
+        margin-left: 230px;
+    }
+    .coin{
+        margin-top: -10px;
+    }
+    .die button{
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+    .ema{
+        margin-right: -30px;
+        margin-left: -100px;
+    }
+    .go{
+        margin-left: 10px;
+         font-size: 40px;
+     }
+     .goals button{
+        margin-top: -130px;
+        margin-left: 250px;
+     }
+
+}
+
+@media (width < 1000px){
+    .abot button{
+        margin-left: 180px;
+    }
+    
+    .coin{
+        margin-top: 2px;
+    }
+
+    .die button{
+        margin-left: 20px;
+        margin-top: 100px;
+      
+    }
+
+    .ema{
+        margin-top: -250px;
+        margin-right: -80px;
+    }
+    
+    .go{
+       margin-right: 400px;
+       margin-left: -50px;
+        font-size: 40px;
+    }
+    .goals button{
+        float: left;
+        margin-top: 50px;
+        margin-left: 200px;
+    
+    }
+}
+@media (width < 990px){
+    .abot button{
+        margin-left: 180px;
+    }
+
+    .ema{
+        margin-top: -250px;
+        margin-right: -80px;
+    }
+    
+    .go{
+       margin-right: 400px;
+       margin-left: -70px;
+        font-size: 40px;
+    }
+    .goals button{
+        float: left;
+        margin-top: 50px;
+        margin-left: 180px;
+    }
+    .pays img, .payss img {
+        margin: 0 50px; /* Adjust the margin to have less space between images */
+    }
+    
+    .pays {
+        margin-top: 120px;
+        margin-left: -10px;
+    }
+   
+}
+@media(width < 960px){
+    .navbar ul{
+        display: none;
+      }
+}
+    @media (width < 930px){
+        .abot button{
+            margin-left: 150px;
+        }
+    
+        .ema{
+            margin-top: -250px;
+            margin-right: -80px;
+        }
+        
+        .go{
+           margin-right: 400px;
+           margin-left: -70px;
+            font-size: 40px;
+        }
+        .goals button{
+            float: left;
+            margin-top: 50px;
+            margin-left: 180px;
+        }
+        .pays img, .payss img {
+            margin: 0 50px; /* Adjust the margin to have less space between images */
+        }
+        
+        .pays {
+            margin-top: 120px;
+            margin-left: -10px;
+        }
+        .navbar ul{
+            display: none;
+          }
+    }
+        
+        @media (width < 900px){
+            .abot button{
+                margin-left: 120px;
+                margin-bottom: -500px;
+            
+            }
+            .abot h1{
+                padding-top: 100px;
+                padding-right: 20px;
+            }
+            .abot p{
+                padding-right: 20px;
+            }
+            .ema{
+                margin-top: -250px;
+                margin-right: -100px;
+            }
+            .navbar ul{
+                display: none;
+              }
+        }
+
+        
+        @media (width < 865px){
+            .abot button{
+                margin-left: 90px;
+                margin-bottom: -500px;
+            
+            }
+            .abot h1{
+                padding-top: 100px;
+                padding-right: 20px;
+            }
+            .abot p{
+                padding-right: 20px;
+            }
+
+            .die button{
+                margin-left: -1px;
+            }
+            
+            .coin{
+                margin-left: -20px;
+            }
+            .co{
+                margin-right: -20px;
+            }
+
+            .goals button{
+                float: left;
+                margin-left: 170px;
+            
+            }
+            .ema{
+                margin-top: -250px;
+            }
+            .navbar ul{
+                display: none;
+              }
+        }
+
+        @media (width = 864px){
+            .abot button{
+                margin-left: 90px;
+                margin-bottom: -500px;
+            
+            }
+            .abot h1{
+                padding-top: 100px;
+                padding-right: 20px;
+            }
+            .abot p{
+                padding-right: 20px;
+            }
+
+            .die button{
+                margin-left: -1px;
+            }
+            
+            .coin{
+                margin-left: -20px;
+            }
+            .co{
+                margin-right: -20px;
+            }
+
+            .goals button{
+                float: left;
+                margin-left: 170px;
+            
+            }
+            .ema{
+                margin-top: -250px;
+                margin-right: -60px;
+            }
+            .navbar ul{
+                display: none;
+              }
+        }
+        @media (width < 810px){
+            .abot button{
+                margin-left: 70px;
+                margin-bottom: -500px;
+            
+            }
+            .abot h1{
+                padding-top: 100px;
+                padding-right: 20px;
+            }
+            .abot p{
+                padding-right: 20px;
+            }
+
+            .die button{
+                margin-left: -1px;
+            }
+            
+            .goals p{
+             margin-left: -120px;
+            
+            }
+            .goals button{
+                float: left;
+                margin-left: 120px;
+            
+            }
+            .ema{
+                margin-top: -300px;
+                margin-right: -100px;
+            }
+            .navbar ul{
+                display: none;
+              }
+          
+        }
+
+        @media (width < 780px){
+            .abot button{
+                margin-left: 50px;
+                margin-top: 20px;
+       
+            }
+            .goals button{
+                margin-left: 100px;
+            }
+           .ema{
+            margin-right: -150px;
+           }
+           .navbar ul{
+            display: none;
+          }
+        }
+
+
+        @media(width < 769px){
+            .flow{
+                display: none;
+            }
+            .abot button{
+                margin-top: 100px;
+                margin-left: 270px;
+            }
+          .abot p{
+            margin-top: 50px;
+          }
+          .abot h1{
+            margin-left: 20px;
+          }
+          .product-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            grid-template-rows: repeat(2, 1fr);    /* 2 equal rows */
+            gap: 20px; /* Space between images */
+            margin-left: -10px;
+            margin-top: 20px;
+          }
+          .die button{
+            margin-top: 50px;
+          }
+          .navbar ul{
+            display: none;
+          }
+        }
+  @media(width < 710px){
+      .abot button{
+         margin-left: 250px;
+         margin-top: 70px;
+      }
+      .die button{
+        margin-left: 30px;
+      }
+      .goals button{
+        margin-left: 70px;
+      }
+
+      .pays{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+        grid-template-rows: repeat(2, 1fr);    /* 2 equal rows */
+        gap: 20px; /* Space between images */
+        margin-left: 50px;
+      }
+
+      .payss{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+        grid-template-rows: repeat(2, 1fr);    /* 2 equal rows */
+        gap: 20px; /* Space between images */
+        margin-left: 50px;
+      }
+
+      .paysss img{
+        display: none;
+      }
+      .product-container{
+        margin-left: -20px;
+      }
+      .navbar ul{
+        display: none;
+      }
+  }
+  @media(width < 660px){
+   .abot button{
+    margin-left: 230px;
+   }
+   .goals button{
+    margin-left: 40px;
+   }
+
+  }
+
+  @media(max-width: 630px){
+    .abot button{
+        margin-left: 220px;
+    }
+    .abot p{
+        margin-left: 10px;
+    }
+    .goals button{
+        margin-left: 30px;
+    }
+    .ema{
+        height: 320px;
+        width: 320px;
+    }
+    
+    .product-container{
+      height: 550px;
+      width: 600px;
+      margin-left: 1px;
+    }
+}
+  @media(width < 560px){
+    .abot button{
+     margin-left: 180px;
+    }
+    .ema{
+        height: 320px;
+        width: 320px;
+        margin-right: -100px;
+    }
+    .payment{
+        margin-left: -40px;
+    }
+    .payment h1{
+        margin-left: 50px;
+
+    }
+    .lo{
+        display: none;
+    }
+    .footer-section h4{
+      margin-left: 200px;
+    }
+    .footer-section p{
+        margin-left: 160px;
+    }
+    .footer-section ul{
+        margin-left: 230px;
+    }
+  }

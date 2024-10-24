@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" type="image/png" href="pics img/GK LOGO.png">
+  <script src="GKhomepage.js"></script>
+<head>
+<title>GK PRODUCTS</title>
+<style>
+    /* General reset and styling */
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: peachpuff;
+}
+
+/* Animation for sliding to the right */
+@keyframes slideToRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for sliding to the left */
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply slide to right animation to .die section */
+.die p, .die img {
+    animation: slideToRight 2s ease forwards;
+}
+
+/* Apply slide to left animation to .gaa section */
+.gaa p, .gaa img {
+    animation: slideToLeft 2s ease forwards;
+}
+
+/* Apply slide to right animation to .pa section */
+.pa p, .pa img {
+    animation: slideToRight 2s ease forwards;
+}
+
+.bt, .Our {
+    animation: slideToRight 2s ease forwards;
+}
+.container {
+    animation: slideToRight 1s ease forwards;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-3px);
+    }
+    20%, 80% {
+        transform: translateX(3px);
+    }
+    30%, 50%, 70% {
+        transform: translateX(-1px);
+    }
+    40%, 60% {
+        transform: translateX(1px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.log {
+    width: 100px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    font-size: 14px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 1000;
+    padding: 15px;
+    margin-left: 20px;
+    float: right;
+}
+
+.navbar a:hover {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    color: palevioletred;
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background: palevioletred;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: black;
+    color: black;
+}
+
+.footer {
+    background-color: bisque;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    border-radius: 100px;
+}
+
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.product-details {
+    flex: 1;
+    padding: 40px;
+}
+
+.product-details h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.product-details .price {
+    font-size: 1.8em;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.ratings {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.rating {
+    color: #f1c40f;
+    font-size: 1.5em;
+}
+
+.rating-count {
+    font-size: 1.1em;
+    color: red;
+    margin-left: 5px;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    counter-reset: custom-counter;
+}
+
+.features li {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.features li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-size: 1.5em;
+}
+
+.buy-button {
+    display:inline-block;
+    width: 50%;
+    padding: 15px;
+    font-size: 1.5em;
+    color: black;
+    background-color: peachpuff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+    margin-left: 80px;
+    text-decoration: none;
+}
+
+.buy-button:hover {
+    background-color: peachpuff;
+}
+
+.product-image {
+    flex: 1;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.product-image img {
+    width: 100%;
+    
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-image img:hover {
+    transform: scale(1.55);
+}
+@media(width < 2000px){
+    .footer{
+        display: none;
+    }
+    .product-section{
+        margin-top: 200px;
+    }
+}
+@media(width < 1000px){
+      .product-section{
+        height: 600px;
+        width: 600px;
+        margin-left: 90px;
+        margin-top: 200px;
+      }
+      .product-section h1 {
+        font-size: 30px;
+        margin-top: -20px;
+      }
+      .product-section .description,
+      .product-section ol{
+        font-size: 15px;
+      }
+      .buy-button{
+        margin-left: 60px;
+        margin-top: 5px;
+      }
+}
+@media(width < 770px){
+    .product-section{
+        margin-left: 85px;
+    }
+}
+@media(width < 775px){
+    .navbar ul{
+        display: none;
+    }
+    .buy-button{
+        margin-top: 20px;
+    }
+}
+@media(width < 710px){
+     .product-section{
+        margin-left: 50px;
+     }
+}
+@media(width < 670px){
+    .product-section{
+        margin-left: 35px;
+    }
+}
+@media(width < 650px){
+    .product-section{
+        height: 550px;
+        width: 500px;
+        margin-left: 70px;
+      }
+    .product-details h1{
+        font-size: 25px;
+        margin-top: -30px;
+    }
+    .product-details ol{
+       font-size: 10px;
+    }
+    .product-details .price{
+      font-size: 19px;
+    }
+    .ratings{
+        font-size: 12px;
+    }
+    .buy-button{
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}
+@media(width < 600px){
+    .product-section{
+        margin-left: 50px;
+    }
+}
+@media(width < 570px){
+    .product-section{
+        margin-left: 40px;
+    }
+}
+@media(width < 540px){
+    .product-section{
+        height: 400px;
+        width: 400px;
+        margin-left: 70px;
+      }
+    .product-details h1{
+        font-size: 25px;
+        margin-top: -30px;
+    }
+    .product-details ol{
+       font-size: 13px;
+    }
+    .product-details .price{
+      font-size: 20px;
+    }
+    .description {
+        display: none;
+    }
+    .ratings{
+        font-size: 15px;
+    }
+    .rating-count{
+        font-size: 13px;
+    }
+    .buy-button{
+        margin-top: 20px;
+        padding: 5px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+}
+
+
+</style>
+</head>
+<body>
+  
+ 
+        <div class="navbar">
+            <a href="GKhomepage.html"><img class="logo" src="pics img/GK LOGO.png" alt="GK Logo"></a>
+            <ul>
+                <li><a href="GKhomepage.html">Home</a></li>
+                <li><a href="GKproduct.html">Products</a></li>
+                <li><a href="GKabout.html">About Us</a></li>
+                <li><a href="GKcontact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    
+    </head>
+    <body>
+    <section class="con">
+      <div class="container">
+        <div class="product-section">
+            <div class="product-details">
+                <h1>Begonia Bloom
+                    Bliss</h1>
+          
+                <div class="ratings">
+
+                    <span class="rating-count">(RELEASE DATE: 07/14/24)</span>
+                </div>
+                <p class="description">Begonias are a diverse and popular group of flowering plants known for their stunning foliage and delicate blooms. Belonging to the Begoniaceae family, Begonias encompass a wide range of species, hybrids, and cultivars, making them suitable for various garden settings, from beds and borders to containers and hanging baskets.
+                </p>
+                <ol class="features">
+                    <li>Foliage Variety</li>
+                    <li>Colorful Blooms</li>
+                    <li>Versatility</li>
+                    <li>Low Maintenance</li>
+                </ol>
+                <a href="GKproduct.html"><button class="buy-button">Return</button></a>
+            </div>
+            <div class="product-image">
+                <img src="pics img/bego.jpg">
+            </div>
+        </div>
+    </div>
+
+</section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 GK GREEN GARDEN CENTER. All rights reserved.</p>
+            
+        </div>
+    </footer>
+</body>
+</html>

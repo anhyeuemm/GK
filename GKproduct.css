@@ -1,0 +1,405 @@
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conpay {
+    display: flex;
+    padding-top: 50px;
+    font-weight: bold;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+.container {
+    flex: 0;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    margin: 0px auto 0px auto; /* Center the container horizontally */
+}
+.container {
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.container .mycard {
+    position: relative;
+    max-width: 264px;
+    height: 420px;
+    background: wheat;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 50px black;
+    transition: 0.4s ease-in-out;
+    border-radius: 20px;
+}
+.container .mycard .cdetail {
+    position: relative;
+    width: 260px;
+    height: 250px;
+}
+.container .mycard .cdetail, p {
+    position: relative;
+    width: 260px;
+    margin-top: 20px;
+  
+}
+.container .mycard .cimg {
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+.container .mycard .cimg img {
+    max-width: 100%;
+    margin-top: 0;
+    border-radius: 20px;
+}
+.container button {
+    padding: 5px 10px;
+    margin-top: 20px;
+    background-color: plum;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em; /* Smaller font size */
+}
+/*.container button:hover {
+ 
+}*/
+
+.con {
+    background-color: peachpuff;
+    display: block;
+    unicode-bidi: isolate;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+.con h1 {
+    text-align: center;
+    padding-top: 90px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.conn {
+    background-color: peachpuff;
+    display: block;
+    unicode-bidi: isolate;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+.conn h1 {
+    text-align: center;
+    padding-top: 90px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+/* Animation for sliding to the right */
+@keyframes slideToRight {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the final position */
+        opacity: 1;
+    }
+}
+
+/* Animation for sliding to the left */
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the final position */
+        opacity: 1;
+    }
+}
+
+/* Apply slide to right animation to .die section */
+.die p, .die img {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToRight animation */
+}
+
+/* Apply slide to left animation to .gaa section */
+.gaa p, .gaa img {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToLeft animation */
+}
+
+/* Apply slide to right animation to .pa section */
+.pa p, .pa img {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToRight animation */
+}
+
+.bt, .Our {
+    animation: slideToRight 2s ease forwards; /* Apply the slideToRight animation */
+}
+.conpay, .pro, h1{
+    animation: slideToRight 1s ease forwards; /* Apply the slideToRight animation */
+}
+
+/* Add animation for the .die section */
+
+
+/* Add other animations for different sections as needed */
+/* Other existing styles */
+.bt {
+    margin-left: 300px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-3px); /* Shake left */
+    }
+    20%, 80% {
+        transform: translateX(3px); /* Shake right */
+    }
+    30%, 50%, 70% {
+        transform: translateX(-1px); /* Shake left */
+    }
+    40%, 60% {
+        transform: translateX(1px); /* Shake right */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+.navbar {
+    margin: auto;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Set the navigation bar to fixed position */
+    width: 100%; /* Set the width to occupy the full width of the viewport */
+    top: 0; /* Position the navigation bar at the top of the viewport */
+    z-index: 1000; /* Ensure the navigation bar stays above other content */
+
+}
+
+.logo {
+    width: 150px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+.log {
+    width: 100px;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    font-size: 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 1000;
+    padding: 15px;
+    margin-left: 20px;
+    float: right;
+}
+
+.navbar a:hover {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; /* Shake effect on hover */
+    color: palevioletred;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 55%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content p {
+    margin-top: 80px;
+    font-weight: 800;
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Original button hover styles */
+button:hover {
+    background: palevioletred;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; /* Shake effect on hover */
+}
+
+/* Additional hover styles for more cool transitions */
+button:hover {
+    transform: scale(1.1); /* Scale the button on hover */
+    box-shadow: black; /* Add a glowing effect */
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; /* Shake effect on hover */
+}
+
+button:hover {
+    color: black;
+}
+p{
+    color: red;
+}
+
+/* Footer */
+.footer {
+    background-color: bisque;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+@media(width < 1000px){
+   .navbar ul{
+    display: none;
+   }
+   .container .mycard {
+    position: relative;
+    max-width: 320px;
+    height: 320px;
+    background: wheat;
+    margin: 10px 10px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 50px black;
+    transition: 0.4s ease-in-out;
+    border-radius: 20px;
+}
+.container .mycard .cimg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-left: 60px;
+}
+
+.container {
+    position: relative;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.container button {
+    padding: 5px 10px;
+    margin-top: 20px;
+    background-color: plum;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.sun{
+    height: 100px;
+    width: 255px;
+}
+
+.container .mycard.sunflower-card {
+   margin-left: 500px;
+}
+
+.beg{
+    height: 112px;
+    width: 265px;
+}
+.conpay {
+    padding-top: 20px;
+    font-weight: bold;
+    padding-bottom: 1px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+}
+@media(width < 900px){
+    .container .mycard.sunflower-card{
+        margin-left: 450px;
+    }
+}
+
+@media(width < 800px){
+    .container .mycard.sunflower-card{
+        margin-left: 400px;
+    }
+}
+
+@media(width < 700px){
+    .container .mycard.sunflower-card{
+        margin-left: 350px;
+    }
+}
+

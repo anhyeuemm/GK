@@ -1,0 +1,369 @@
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: peachpuff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.by{
+    color: black;
+    height: 100vh;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+/* Animation for sliding to the right */
+@keyframes slideToUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form {
+    animation: slideToUp 1s ease forwards;
+}
+
+
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-3px);
+    }
+    20%, 80% {
+        transform: translateX(3px);
+    }
+    30%, 50%, 70% {
+        transform: translateX(-1px);
+    }
+    40%, 60% {
+        transform: translateX(1px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.log {
+    width: 100px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    font-size: 14px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 1000;
+    padding: 15px;
+    margin-left: 20px;
+    float: right;
+}
+
+.navbar a:hover {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    color: palevioletred;
+}
+
+button {
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background: palevioletred;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: black;
+    color: black;
+}
+
+.footer {
+    background-color: bisque;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .checkout-form {
+    flex: 2;
+    margin-right: 20px;
+  }
+  
+  .express-checkout button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .or-divider {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .secure-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 50px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 100px;
+  }
+  
+  .contact-information, .shipping-address {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"], input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox input {
+    margin-right: 5px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .form-buttons button {
+    padding: 5px 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .return-cart {
+    background-color: plum;
+  }
+  
+  .continue-shipping {
+    background-color: plum;
+    color: black;
+  }
+  
+  .sms-alerts {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .sms-alerts p {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .order-summary {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .item-details {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .discount-code {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .discount-code input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .discount-code button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .price-summary {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .price-summary div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+  }
+  
